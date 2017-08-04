@@ -91,8 +91,8 @@ class SuperGrid(FloatLayout):
             baseWidth = int((self.width-((cols+1)*spacing))/cols)
             baseHeight = int((self.height-((rows+1)*spacing))/rows)
             
-            child.x = (col+1)*spacing + col*baseWidth
-            child.y = (row+1)*spacing + row*baseHeight
+            child.x = self.x + (col+1)*spacing + col*baseWidth
+            child.y = self.y + (row+1)*spacing + row*baseHeight
             
             child.width = baseWidth*colSpan+(colSpan-1)*spacing
             child.height = baseHeight*rowSpan+(rowSpan-1)*spacing
