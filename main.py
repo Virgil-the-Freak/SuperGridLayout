@@ -61,7 +61,7 @@ class SuperLabel(Label):
         self.rect.size = instance.size
 
 
-class SuperGridLayout(FloatLayout):
+class SuperGrid(FloatLayout):
 
     rows = NumericProperty(1)
     columns = NumericProperty(1)
@@ -104,18 +104,18 @@ class SuperGridLayout(FloatLayout):
             self.do_layout()
 
         def add_widget(self, widget):
-            super(SuperGridLayout, self).add_widget(widget)
+            super(SuperGrid, self).add_widget(widget)
             self.do_layout()
 
         def remove_widget(self, widget):
-            super(SuperGridLayout, self).remove_widget(widget)
+            super(SuperGrid, self).remove_widget(widget)
             self.do_layout()
 
         
 
 class MyApp(App):
     def build(self):
-        return SuperGridLayout()
+        return SuperGrid()
 
 MyApp().run()
 
